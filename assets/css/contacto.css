@@ -1,0 +1,147 @@
+/* 
+body{
+    height: 100%; 
+    overflow-x: auto;
+    overflow-x: hidden; 
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #BFBFBF;
+  }
+   */
+  .scroll {
+    margin: 0 auto;
+  }
+  
+  /* Estilo para el scroll personalizado */
+  body::-webkit-scrollbar {
+    width: 10px; /* Ancho del scrollbar */
+    background: #fff; /* Fondo del scrollbar negro */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: #8C8C8C; /* Color de la perilla del scrollbar (blanco) */
+  }
+  
+  body::-webkit-scrollbar-thumb:hover {
+    background: #888; /* Color de la perilla del scrollbar al pasar el mouse */
+  }
+  
+  .contact_form{  
+    width: 460px; 
+    height: auto;
+    margin: 80px auto;
+    border-radius: 10px;  
+    padding-top: 30px;
+    padding-bottom: 20px;  
+    background-color: #fbfbfb; 
+    padding-left: 30px; 
+  }
+  
+  
+  .inputForm{
+    background-color: #fbfbfb; 
+    width: 408px; 
+    height: 40px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: #BFBFBF;
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+  }
+  
+  
+  textarea{
+    background-color: #fbfbfb; 
+    width: 405px; 
+    height: 150px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: #BFBFBF; 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+    padding-top: 15px; 
+  }
+  
+  
+  label{
+    display: block; 
+    float: center;  
+  }
+  
+  
+  button{
+    height: 45px; 
+    padding-left: 5px;
+    padding-right: 5px;   
+    margin-bottom: 20px; 
+    margin-top: 10px;   
+    text-transform: uppercase;
+    background-color: #404040; 
+    border-color: #404040; 
+    border-style: solid; 
+    border-radius: 10px;  
+    width: 420px;   
+    cursor: pointer;
+  }
+  
+  
+  button p{
+    color: #fff; 
+  }
+  
+  
+  span{
+    color: #0D0D0D;
+  }
+  
+  
+  .aviso{
+    font-size: 13px;  
+    color: #0e0e0e;  
+  }
+  
+  
+  h1{
+    font-size: 39px;  
+    text-align: letf; 
+    padding-bottom: 20px; 
+    color: #0D0D0D;
+  }
+  
+  
+  h3{
+    font-size: 16px; 
+    padding-bottom: 30px;
+    color: #0D0D0D;
+  }
+  
+  
+  p{
+    font-size: 14px; 
+    color: #0D0D0D;
+  }
+  
+  
+  ::-webkit-input-placeholder {
+   color: #a8a8a8;
+  }
+  
+  
+  ::-webkit-textarea-placeholder {
+   color: #a8a8a8;
+  }
+  
+  
+  .formulario input:focus{
+    outline:0;
+    border: 1px solid #0D0D0D;
+  }
+  
+  
+  .formulario textarea:focus{
+    outline:0;
+    border: 1px solid #0D0D0D;
+  }
