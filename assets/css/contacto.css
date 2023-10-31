@@ -145,3 +145,17 @@ body{
     outline:0;
     border: 1px solid #0D0D0D;
   }
+
+  :root{
+    --body-color:  #BFBFBF;;
+    --sidebar-color: #fff;
+    --primary-color: #404040;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
