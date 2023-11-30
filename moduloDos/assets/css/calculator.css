@@ -1,0 +1,90 @@
+ 
+body{
+    height: 100%; 
+    overflow-x: auto;
+    overflow-x: hidden; 
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #BFBFBF;
+  }
+  
+  .scroll {
+    margin: 0 auto;
+  }
+  
+  /* Estilo para el scroll personalizado */
+  body::-webkit-scrollbar {
+    width: 10px; /* Ancho del scrollbar */
+    background: #fff; /* Fondo del scrollbar negro */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: #8C8C8C /* Color de la perilla del scrollbar (blanco) */
+  }
+  
+  body::-webkit-scrollbar-thumb:hover {
+    background: #888; /* Color de la perilla del scrollbar al pasar el mouse */
+  }
+ 
+ 
+.divcalculator{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+	padding-bottom: 2rem;
+}  
+
+ .calculadora{
+	background-color:#BFBFBF;
+  	color:black;
+	display:grid;
+  	width: 350px;
+ 	max-width:100%;
+  	padding: 1.5rem;
+  	border-radius:1rem;
+  	grid-template-columns: repeat(4, 1fr);
+  	gap: .5rem;
+}
+
+.pantalla{
+	grid-column: 1/-1;
+	background-color:#ffff;
+	padding: 1.5rem;
+  	font-size:2rem;
+	text-align: right;	
+  	border-radius:1.5rem;
+    margin-bottom:1rem;
+    font-family:monospace;
+    font-weight:600;
+  	overflow-x: auto;
+    overflow-x: hidden; 
+}
+
+.btn{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:0;
+    background-color:#8C8C8C;
+	color:white;
+  	padding:1rem 1.5rem;
+  	cursor:pointer;
+  	border-radius:1rem;
+}
+
+.btn:hover{
+	background-color:#8C8C8C;
+}
+
+#igual{
+	grid-row: span 2;
+  	background-color:#404040;
+}
+
+#igual:hover{
+	grid-row: span 2;
+  	background-color:#404043;
+}
+
+#cero{
+	grid-column: span 2;
+}

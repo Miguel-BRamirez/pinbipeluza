@@ -330,7 +330,7 @@ footer{
     justify-content: center;
 
 }
-
+/*coment*/
 .parent {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
