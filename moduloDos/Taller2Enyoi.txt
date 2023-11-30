@@ -1,0 +1,160 @@
+TALLER
+
+
+HTML
+
+  <form action="" id="fomrPerson">
+    <input type="text" placeholder="Ingrese nombre" id="namePerson">
+    <input type="text" placeholder="Ingrese su apellido" id="lastNamePerson">
+    <input type="number" placeholder="Ingrese edad" id="agePerson">
+    <input type="number" placeholder="Ingrese número de C.C" id="identificationPerson">
+    
+    <button type="submit" id="btnSavePerson">Guardar persona</button>
+   </form>
+   
+    <form action="" id="formAnimal">
+    <input type="text" placeholder="Ingrese nombre del animal" id="nameAnimal">
+    <input type="text" placeholder="Ingrese el sexo del animal" id="sexAnimal">
+    <input type="text" placeholder="Ingrese la raza del animal" id="raceAnimal">
+    
+    <button type="submit" id="btnSaveAnimal">Guardar animal</button>
+   </form>
+   
+    <form action="" id="formVeterinary">
+    <input type="text" placeholder="Ingrese de la veterinaria" id="nameVetery">
+    <input type="text" placeholder="Ingrese dirección de la veterinaria" id="addressVetery">
+    <input type="number" placeholder="Ingrese teléfono de la veterinaria" id="telVetery">
+    
+    <button type="submit" id="btnSaveVeterinary">Guardar veterinaría</button>
+   </form>
+   
+   
+JS
+
+//forms
+const formPersons = document.getElementById('fomrPerson');
+const formAnimals = document.getElementById('formAnimal');
+const formVetery = document.getElementById('formVeterinary');
+
+//inputs
+
+//formPersons
+const nameP = document.getElementById('namePerson');
+const lastNameP = document.getElementById('lastNamePerson');
+const ageP = document.getElementById('agePerson');
+const identificationP = document.getElementById('identificationPerson');
+
+//formAnimals
+const nameA = document.getElementById('nameAnimal');
+const sexA = document.getElementById('sexAnimal');
+const raceA = document.getElementById('raceAnimal');
+
+//formVetery
+const nameV = document.getElementById('nameVetery');
+const addressV = document.getElementById('addressVetery');
+const telV = document.getElementById('telVetery');
+
+
+//Class create person
+class persons{
+  constructor(nameP, lastNameP, ageP, identificationP){
+      this.name = nameP;
+      this.lastName = lastNameP;
+      this.age = ageP;
+      this.identification = identificationP;
+  }
+
+  mostrarNombreUser(){
+    return 'El usuario presente es ' + this.name 
+  }
+
+  mostrarDatos(){
+    return 'Datos \n' + 'Nombre: ' + this.name + '\n Apellido: ' + this.lastName + '\n Edad: ' + this.age + '\n Cédula: ' + this.identification;
+    }
+      guardarEnBaseDeDatos() {
+    console.log('Guardando usuario en la base de datos');
+  }
+}
+
+//Class create animal
+class animals{
+	  constructor(nameA, sexA, raceA){
+      this.name = nameA;
+      this.sex = sexA;
+      this.race = raceA;
+  }
+  
+    mostrarNombreUser(){
+    return 'El animal presente es ' + this.name 
+  }
+  
+    mostrarDatos() {
+    let datos = 'Datos \n' + 'Nombre: ' + this.name + '\n Sexo: ' + this.sex + '\n Raza: ' + this.race;
+    return datos;
+  }
+  
+    guardarEnBaseDeDatos() {
+    console.log('Guardando animal en la base de datos');
+  }
+}
+
+//Class create veterinary
+class veterinary{
+	  constructor(nameV, addressV, telV){
+      this.name = nameV;
+      this.dir = addressV;
+      this.tel = telV;
+  }
+  
+    mostrarNombreUser(){
+    return 'El nombre de la veterinaria presente es ' + this.name 
+  }
+  
+    mostrarDatos() {
+    let datos = 'Datos \n' + 'Nombre: ' + this.name + '\n Dirección: ' + this.dir + '\nTeléfono: ' + this.tel;
+    return datos;
+  }
+  
+    guardarEnBaseDeDatos() {
+    console.log('Guardando veterinaria en la base de datos');
+  }
+}
+
+//Save forms
+function onSubmitForm(event){
+	event.preventDefault();
+  
+	if (event.target === formPersons) {
+		const name = nameP.value;
+		const lastName = lastNameP.value;
+		const age = ageP.value;
+		const identification = identificationP.value;
+
+		const newPerson = new persons(name, lastName, age, identification);
+		newPerson.guardarEnBaseDeDatos();
+		console.log(newPerson.mostrarNombreUser());
+		console.log(newPerson.mostrarDatos());
+	} else if (event.target === formAnimals) {
+		const name = nameA.value;
+		const sex = sexA.value;
+		const race = raceA.value;
+
+		const newAnimal = new animals(name, sex, race);
+		newAnimal.guardarEnBaseDeDatos();
+		console.log(newAnimal.mostrarNombreUser());
+		console.log(newAnimal.mostrarDatos());
+	} else if (event.target === formVetery) {
+		const name = nameV.value;
+		const address = addressV.value;
+		const tel = telV.value;
+
+		const newVeterinary = new veterinary(name, address, tel);
+		newVeterinary.guardarEnBaseDeDatos();
+		console.log(newVeterinary.mostrarNombreUser());
+		console.log(newVeterinary.mostrarDatos());
+	}
+}
+
+formPersons.addEventListener('submit', onSubmitForm);
+formAnimals.addEventListener('submit', onSubmitForm);
+formVetery.addEventListener('submit', onSubmitForm);

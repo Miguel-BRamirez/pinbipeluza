@@ -11,6 +11,8 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/module2.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -88,6 +90,88 @@
                     <img src="assets/img/icons/logo-principal.png" alt="" style="width: 10rem; height: 8.5rem;">
                     P-I-N-B-I-P-E-L-U-Z-A
                 </div>
+
+                <div class="contentModuloDos">
+                    <div class="container">
+                    <div class="parent">
+                        <div class="formulario">
+                        <div class="div2"> 
+                            <form action="" id="fomrPerson">
+                                <input type="text" placeholder="Ingrese nombre" id="namePerson" required="required">
+                                <input type="text" placeholder="Ingrese su apellido" id="lastNamePerson" required="required">
+                                <input type="number" placeholder="Ingrese edad" id="agePerson" required="required">
+                                <input type="number" placeholder="Ingrese número de C.C" id="identificationPerson" required="required">
+                                
+                                <button type="submit" id="btnSavePerson">Guardar persona</button>
+                               </form>
+                        </div>
+                        <div class="div3"> <form action="" id="formAnimal">
+                            <input type="text" placeholder="Ingrese nombre del animal" id="nameAnimal" required="required">
+                            <input type="text" placeholder="Ingrese el sexo del animal" id="sexAnimal" required="required">
+                            <input type="text" placeholder="Ingrese la raza del animal" id="raceAnimal" required="required">
+                            
+                            <button type="submit" id="btnSaveAnimal">Guardar animal</button>
+                           </form></div>
+                        <div class="div4"><form action="" id="formVeterinary">
+                            <input type="text" placeholder="Ingrese de la veterinaria" id="nameVetery" required="required">
+                            <input type="text" placeholder="Ingrese dirección de la veterinaria" id="addressVetery" required="required">
+                            <input type="number" placeholder="Ingrese teléfono de la veterinaria" id="telVetery" required="required">
+                            
+                            <button type="submit" id="btnSaveVeterinary">Guardar veterinaría</button>
+                           </form> </div>
+                        </div>
+                        <div class="respuesta">
+                            <div class="div2"> 
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Apellido</th>
+                                        <th scope="col">Edad</th>
+                                        <th scope="col">Documento</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                  </table>
+                            </div>
+                            <div class="div3"> 
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Sexo</th>
+                                        <th scope="col">Raza</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                  </table>
+                            </div>
+                            <div class="div4">
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Dirección</th>
+                                        <th scope="col">Teléfono</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                  </table>
+                            </div>
+                            </div>
+                    </div>
+                </div>
+                </div>
+                <h3 style="color:red"> si das guardar se anexa en la tabla según el formulario </3>
             </main>
         </section>
     </div>
@@ -128,6 +212,7 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="assets/js/home.js"></script>
+    <script src="assets/js/module2.js"></script>
 </body>
 
 </html>
